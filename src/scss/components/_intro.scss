@@ -1,0 +1,125 @@
+.intro {
+  position: relative;
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    height: 600px;
+
+    @include sm-tablet {
+      padding-top: 7.66rem;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+  }
+
+  &__content {
+    margin-bottom: 2.33rem;
+    margin-left: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    text-align: right;
+
+    &::after {
+      content: '&';
+      position: absolute;
+      right: 0;
+      top: 40px;
+      color: var(--color-white);
+      font-family: var(--ff-title);
+      font-size: 11.33rem;
+      font-weight: 900;
+      line-height: 1;
+      opacity: 0.2;
+    }
+
+    @include sm-tablet {
+      align-items: center;
+      order: 0;
+      width: 100%;
+      text-align: center;
+
+      &::after {
+        right: unset;
+        top: -10px;
+        font-size: 5rem;
+      }
+    }
+  }
+
+  &__subtitle {
+    color: var(--color-white);
+    font: var(--primary);
+  }
+
+  &__title {
+    color: var(--color-white);
+    font: var(--title);
+    opacity: 0.8;
+
+    @include sm-tablet {
+      font-size: var(--font-xxl);
+    }
+  }
+}
+
+.intro-slider {
+  position: absolute;
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  background-color: var(--color-black);
+
+  picture img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  &__list {
+    display: grid;
+    grid-auto-flow: column;
+  }
+
+  &__nav {
+    margin: 0 2rem 2rem;
+    position: relative;
+    display: flex;
+
+    @include sm-tablet {
+      order: 1;
+    }
+  }
+
+  &__btn {
+    cursor: pointer;
+    background-color: transparent;
+    border-style: solid;
+    transition: var(--default);
+
+    &--prev {
+      margin-right: 0.66rem;
+      border-width: 10px 10px 10px 0;
+      border-color: transparent var(--color-white) transparent transparent;
+
+      &:hover {
+        border-color: transparent var(--color-lightgray) transparent transparent;
+      }
+    }
+
+    &--next {
+      border-width: 10px 0 10px 10px;
+      border-color: transparent transparent transparent var(--color-white);
+
+      &:hover {
+        border-color: transparent transparent transparent var(--color-lightgray);
+      }
+    }
+  }
+}

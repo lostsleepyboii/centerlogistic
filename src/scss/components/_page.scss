@@ -1,0 +1,68 @@
+.page {
+  &__img {
+    height: 350px;
+    background-color: var(--color-black);
+
+    picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    @include mobile {
+      height: 250px;
+    }
+  }
+
+  &__title {
+    margin-bottom: 2.66rem;
+    color: var(--color-darkgray);
+    font: var(--middle-high);
+
+    span {
+      color: var(--color-blue);
+    }
+
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+}
+
+.page-content {
+  padding-top: 4rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  max-width: 890px;
+  width: 100%;
+
+  &__inner {
+    margin-bottom: 2.66rem;
+    display: grid;
+    gap: 1.5rem;
+
+    ul li {
+      list-style: disc;
+    }
+
+    p,
+    li {
+      color: var(--color-gray);
+      font-size: var(--font-l);
+      font-weight: 400;
+      line-height: 1.5;
+    }
+
+    li {
+      margin-left: 1.4rem;
+    }
+
+    strong {
+      color: var(--color-darkgray);
+      font-size: 1.6rem;
+      font-weight: 700;
+      line-height: 1.5;
+    }
+  }
+}

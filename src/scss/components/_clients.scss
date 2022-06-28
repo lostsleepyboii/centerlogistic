@@ -1,0 +1,123 @@
+.clients {
+  padding: 4rem 0;
+
+  &__title {
+    margin-bottom: 2.66rem;
+    color: var(--color-darkgray);
+    font: var(--middle-high);
+
+    span {
+      color: var(--color-blue);
+    }
+
+    @include sm-tablet {
+      text-align: center;
+    }
+
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+
+  &__inner {
+    margin-bottom: 4rem;
+    display: grid;
+    grid-template-columns: 1fr 485px;
+    gap: 3.16rem;
+
+    @include tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  &__list {
+    margin-top: -0.5rem;
+    margin-left: -1.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: center;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    .no-webp &.lazy-bg-loaded {
+      background-image: url('../img/map.png');
+    }
+
+    .webp &.lazy-bg-loaded {
+      background-image: url('../img/map.webp');
+    }
+
+    @include tablet {
+      order: 1;
+    }
+
+    @include mobile {
+      margin: 0;
+      flex-wrap: nowrap;
+      overflow: auto;
+      width: 100%;
+    }
+  }
+
+  &__item {
+    margin: 1.5rem;
+
+    @include mobile {
+      picture img {
+        max-width: none;
+      }
+    }
+  }
+
+  &__reviews {
+    @include tablet {
+      order: 0;
+    }
+  }
+
+  &__footer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    
+    &.lazy-bg-loaded {
+      &::after {
+        background-image: url('../img/empty.svg');
+      }
+    }
+    
+    &::after {
+      content: '';
+      position: absolute;
+      left: 17.6rem;
+      width: 49px;
+      height: 47px;
+      background-repeat: no-repeat;
+
+      @include mobile {
+        left: 50%;
+        bottom: -1.33rem;
+      }
+    }
+
+    @include mobile {
+      flex-direction: column;
+    }
+  }
+
+  &__text {
+    margin-left: 2.33rem;
+    color: var(--color-darkgray);
+    font-family: var(--ff-primary);
+    font-size: 1.2rem;
+    font-weight: 400;
+    line-height: 1;
+
+    @include mobile {
+      margin-top: 1.33rem;
+      margin-left: 0;
+    }
+  }
+}

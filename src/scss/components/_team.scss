@@ -1,0 +1,88 @@
+.team {
+  padding: 4rem 0;
+  background-color: var(--color-bg);
+
+  &__title {
+    margin-bottom: 2.66rem;
+    color: var(--color-darkgray);
+    font: var(--middle-high);
+
+    span {
+      color: var(--color-blue);
+    }
+
+    @include sm-tablet {
+      text-align: center;
+    }
+
+    @include mobile {
+      font-size: 2rem;
+    }
+  }
+
+  &__list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+    justify-content: space-between;
+    width: 100%;
+    gap: 2rem;
+
+    @include sm-tablet {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+.team-item {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  &__img {
+    height: 195px;
+    background-color: var(--color-black);
+
+    picture img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__name {
+    margin-top: 0.86rem;
+    margin-bottom: 0.33rem;
+    color: var(--color-darkgray);
+    font: var(--small);
+  }
+
+  &__desc {
+    margin-bottom: 0.66rem;
+    color: var(--color-gray);
+    font: var(--primary);
+  }
+
+  &__link {
+    padding-left: 1.66rem;
+    color: var(--color-gray);
+    font: var(--primary);
+    background-position: left;
+    background-repeat: no-repeat;
+
+    &--email.lazy-bg-loaded {
+      background-image: url('../img/mail-black.svg');
+    }
+
+    &--phone.lazy-bg-loaded {
+      background-image: url('../img/call-black.svg');
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0.66rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}

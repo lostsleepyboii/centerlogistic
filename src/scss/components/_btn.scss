@@ -1,0 +1,26 @@
+.btn {
+  padding: 0.86rem 3rem;
+  display: block;
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: 700;
+  line-height: 1.4rem;
+  text-align: center;
+  cursor: pointer;
+  background-image: linear-gradient(to right, #ff903e, #ff2c2c);
+  border-radius: 5px;
+  box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0.2);
+  transition: var(--default);
+
+  &:hover {
+    box-shadow: 0 10px 15px 0 rgba(0, 0, 0, 0);
+  }
+
+  @include mobile {
+    width: 100%;
+  }
+}
+
+.btn--large {
+  width: 100%;
+}

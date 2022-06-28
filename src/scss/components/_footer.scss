@@ -1,0 +1,86 @@
+.footer {
+  margin-top: 8rem;
+  position: relative;
+  background-position: left -50px bottom -80px, right -50px bottom -80px;
+  background-repeat: no-repeat;
+  background-color: var(--color-bg);
+
+  .no-webp &.lazy-bg-loaded {
+    background-image: url('../img/tire-track-left.png'), url('../img/tire-track-right.png');
+  }
+
+  .webp &.lazy-bg-loaded {
+    background-image: url('../img/tire-track-left.webp'), url('../img/tire-track-right.webp');
+  }
+
+  &__inner {
+    padding: 2.66rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__contacts {
+    margin-top: 1.66rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+  &__address {
+    color: var(--color-darkgray);
+    font-size: var(--font-xs);
+    font-weight: 700;
+    font-style: normal;
+    line-height: 1.6;
+  }
+
+  &__text {
+    color: var(--color-darkgray);
+    font-size: var(--font-xs);
+    font-weight: 700;
+    line-height: 1.6;
+
+    &--link {
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &__nav {
+    margin-top: 1.66rem;
+    display: flex;
+  }
+
+  &__link {
+    color: var(--color-primary);
+    font-size: var(--font-xs);
+    font-weight: 400;
+    line-height: 1.6;
+
+    &:not(:last-child) {
+      margin-right: 1rem;
+    }
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  @include tablet {
+    background-position: left -120px bottom -80px, right -120px bottom -80px;
+    background-size: contain;
+  }
+
+  @include sm-tablet {
+    background-position: left -180px bottom -80px, right -180px bottom -80px;
+  }
+
+  @include mobile {
+    background-position: left -240px bottom -100px, right -240px bottom -100px;
+  }
+}

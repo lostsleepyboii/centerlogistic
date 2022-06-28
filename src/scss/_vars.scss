@@ -1,0 +1,38 @@
+:root {
+  // основные цвета
+  --color-primary: #004af2;
+  --color-bg: #f9f9f9;
+  --color-black: #000;
+  --color-white: #fff;
+
+  // остальные цвета
+  --color-lightgray: #dbdbdb;
+  --color-gray: #585858;
+  --color-darkgray: #2c2c2c;
+  --color-blue: #0d53f2;
+  --color-darkblue: #033fc9;
+  --color-red: #ff3e2f;
+
+  // шрифты
+  --font-primary: 1rem;
+  --font-xs: 0.8rem;
+  --font-s: 0.93rem;
+  --font-m: 1.06rem;
+  --font-l: 1.2rem;
+  --font-xl: 1.4rem;
+  --font-xxl: 2rem;
+  --ff-primary: "PT Sans", sans-serif;
+  --ff-title: "Lato", sans-serif;
+
+  // наборы шрифтов
+  --title: 700 7.33rem / 0.9 var(--ff-title);
+  --primary: 400 1rem / 1.4 var(--ff-primary);
+  --high: 900 6rem / 1 var(--ff-title);
+  --middle-high: 900 3rem / 1 var(--ff-title);
+  --middle: 900 1.6rem / 1 var(--ff-title);
+  --middle-small: 900 1.4rem / 1 var(--ff-title);
+  --small: 900 1.2rem / 1 var(--ff-title);
+
+  // анимация
+  --default: all 0.2s ease;
+}

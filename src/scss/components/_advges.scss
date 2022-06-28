@@ -1,0 +1,50 @@
+.advges {
+  padding: 4rem 0;
+
+  &__inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    
+    @include sm-tablet {
+      grid-template-columns: 1fr;
+      gap: 3rem;
+    }
+  }
+
+  &__list {
+    padding-left: 3.33rem;
+    display: grid;
+    width: 60%;
+    height: 100%;
+    background-position: left;
+    background-repeat: no-repeat;
+    gap: 2.33rem;
+
+    &.lazy-bg-loaded {
+      background-image: url('../img/bg-way.svg');
+    }
+
+    @include sm-tablet {
+      width: 100%;
+      background-size: contain;
+    }
+  }
+}
+
+.advges-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  &__title {
+    margin-bottom: 0.8rem;
+    color: var(--dark-gray);
+    font: var(--middle-small);
+  }
+
+  &__desc {
+    color: var(--gray);
+    font: var(--primary);
+  }
+}

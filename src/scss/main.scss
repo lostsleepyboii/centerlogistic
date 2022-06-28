@@ -1,0 +1,24 @@
+// @import 'vars'; если используете scss-переменные - подключите сюда vars, но удалите root из _vars.scss
+
+// Миксины
+@import "./mixins/breakpoint";
+@import "./mixins/checkbox";
+
+// Блоки сайта
+@import "./components/header";
+@import "./components/nav";
+@import "./components/intro";
+@import "./components/callback-form";
+@import "./components/btn";
+@import "./components/burger";
+@import "./components/services";
+@import "./components/clients";
+@import "./components/reviews";
+@import "./components/advges";
+@import "./components/team";
+@import "./components/mission";
+@import "./components/pre-blog";
+@import "./components/footer";
+@import "./components/blog";
+@import "./components/page";
+@import "./components/modal";
